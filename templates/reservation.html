@@ -20,21 +20,16 @@
     <link rel="stylesheet" href="{% static 'fonts/ionicons/css/ionicons.min.css' %}">
     <link rel="stylesheet" href="{% static 'fonts/fontawesome/css/font-awesome.min.css' %}">
 
-
-
-
     <!-- Theme Style -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
-  <body>
 
+  <body>
     <header class="site-header">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-4 site-logo" data-aos="fade"><a href="index.html"><em>Hotel Reservation System</em></a></div>
+          <div class="col-4 site-logo" data-aos="fade"><a href="/"><em>Hotel Reservation System</em></a></div>
           <div class="col-8">
-
-
             <div class="site-menu-toggle js-site-menu-toggle"  data-aos="fade">
               <span></span>
               <span></span>
@@ -53,7 +48,7 @@
                         <li><a href="/About">About</a></li>
                         <li><a href="/Blog">Events</a></li>
                         <li><a href="/Contact">Contact</a></li>
-                        <li class="active"><a href="#">Reservation Form</a></li>
+                        <li class="active"><a href="index.html" class="btn btn-success py-3 text-white px-5">Reservation Form</a></li>
                       </ul>
                     </div>
                   </div>
@@ -83,13 +78,13 @@
     </section>
     <!-- END section -->
 
-
     <section class="section contact-section" id="next">
       <div class="container">
         <div class="row">
           <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
 
             <form action="#" method="post" class="bg-white p-md-5 p-4 mb-5 border">
+              {% csrf_token %}
               <div class="row">
                 <div class="col-md-6 form-group">
                   <label class="text-black font-weight-bold" for="name">Name</label>
@@ -146,8 +141,6 @@
                 </div>
               </div>
 
-
-
               <div class="row mb-4">
                 <div class="col-md-12 form-group">
                   <label class="text-black font-weight-bold" for="message">Notes</label>
@@ -185,17 +178,13 @@
           </div>
         </div>
 
-
-
         <div class="row">
           <div class="js-carousel-2 owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
-
             <div class="testimonial text-center slider-item">
               <div class="author-image mb-3">
 
               </div>
               <blockquote>
-
                 <p>&ldquo;It is a lovely place to stay, with clean and comfortable rooms, great facilities like fridge, T.V., microwave, tea and coffee. The staff are very kind, cheerful and helpful.&rdquo;</p>
               </blockquote>
               <p><em>&mdash; Adrian Mercurio</em></p>
@@ -216,19 +205,16 @@
 
               </div>
               <blockquote>
-
                 <p>&ldquo;It is a lovely place to stay, with clean and comfortable rooms, great facilities like fridge, T.V., microwave, tea and coffee. The staff are very kind, cheerful and helpful.&rdquo;</p>
               </blockquote>
               <p><em>&mdash; Niko Curaza</em></p>
             </div>
-
 
             <div class="testimonial text-center slider-item">
               <div class="author-image mb-3">
 
               </div>
               <blockquote>
-
                 <p>&ldquo;It is a lovely place to stay, with clean and comfortable rooms, great facilities like fridge, T.V., microwave, tea and coffee. The staff are very kind, cheerful and helpful.&rdquo;</p>
               </blockquote>
               <p><em>&mdash; Kimmy Matillano</em></p>
@@ -249,31 +235,31 @@
 
               </div>
               <blockquote>
-
                 <p>&ldquo;It is a lovely place to stay, with clean and comfortable rooms, great facilities like fridge, T.V., microwave, tea and coffee. The staff are very kind, cheerful and helpful.&rdquo;</p>
               </blockquote>
               <p><em>&mdash; July King Cadayuna</em></p>
             </div>
-
           </div>
             <!-- END slider -->
         </div>
-
       </div>
     </section>
 
-     <section class="section">
+    <section class="section">
       <div class="container" >
         <div class="row align-items-center">
           <div class="col-md-6" data-aos="fade-up">
             <h2>Make Yourself Comfortable in Any of Our Fully Air-conditioned Rooms</h2>
           </div>
+
           <div class="col-md-6 text-right" data-aos="fade-up" data-aos-delay="200">
             <a href="/Reservation" class="btn btn-success py-3 text-white px-5">Reserve Now</a>
           </div>
+
         </div>
       </div>
     </section>
+
     <footer class="section footer-section bg-success">
       <div class="container">
         <div class="row mb-4">
@@ -283,7 +269,7 @@
               <li><a href="#">Terms &amp; Conditions</a></li>
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Help</a></li>
-             <li><a href="#">Rooms</a></li>
+              <li><a href="#">Rooms</a></li>
             </ul>
           </div>
           <div class="col-md-3 mb-5">
@@ -312,14 +298,10 @@
         </div>
         <div class="row bordertop pt-5">
           <p class="col-md-6 text-center">
-
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;<script data-cfasync="false"></script><script>document.write(new Date().getFullYear());</script>All Rights Reserved | Hotel Reservation System | Developed by: postgrethon.wordpress.com</i>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
           </p>
-
-          </div>
         </div>
       </div>
     </footer>
@@ -331,15 +313,9 @@
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
     <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-
-
     <script src="{% static 'js/aos.js' %}"></script>
-
     <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
     <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
-
-
-
     <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>
